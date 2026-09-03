@@ -1,6 +1,6 @@
 ## Aperçu
 
-Quatre variantes d'affichage, toutes en 72 pixels de haut :
+Quatre variantes d'affichage :
 
 ![Les quatre variantes de la carte IQA](https://raw.githubusercontent.com/rivland/iqa-card/main/images/variantes.png)
 
