@@ -1,3 +1,13 @@
+## Aperçu
+
+Quatre variantes d'affichage, toutes en 72 pixels de haut :
+
+![Les quatre variantes de la carte IQA](https://raw.githubusercontent.com/rivland/iqa-card/main/images/variantes.png)
+
+Un clic ouvre la vue détaillée, facteur par facteur, avec la tendance sur 24 heures :
+
+![Vue détaillée de la carte IQA](https://raw.githubusercontent.com/rivland/iqa-card/main/images/vue-detaillee.png)
+
 # IQA Card
 
 Carte Lovelace pour Home Assistant qui affiche un **indice de qualité de l'air
