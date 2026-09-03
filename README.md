@@ -33,7 +33,7 @@ l'affichage ne peut pas diverger du score.
 
 ## Installation
 
-HACS → menu ⋮ → **Custom repositories** → URL de ce dépôt → catégorie
+HACS → menu ⋮ → **Custom repositories** → [URL de ce dépôt](https://github.com/rivland/iqa-card) → catégorie
 **Dashboard** → *Add*. Puis installer.
 
 Contrairement à une intégration, aucun redémarrage n'est nécessaire : un
