@@ -17,7 +17,7 @@
  */
 
 
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 const TIERS = [
   { min: 80, name: "Excellent", vivid: "#7BC67A",
@@ -159,7 +159,8 @@ class IqaCard extends HTMLElement {
         variant: "Version",
       }[s.name] || s.name),
       computeHelper: (s) => (s.name === "entity"
-        ? "Le capteur créé avec la macro iqa.jinja (celui qui expose l'attribut « detail »)."
+        ? "Le capteur IQA à afficher : celui créé par l'intégration iqa-score, "
+          + "ou par la macro iqa.jinja. Il expose un attribut « detail »."
         : undefined),
     };
   }
@@ -193,8 +194,12 @@ class IqaCard extends HTMLElement {
       this.shadowRoot.innerHTML = this._styles() +
         `<ha-card><div class="msg">
           <strong>Ce capteur n'expose pas d'attribut « detail ».</strong>
-          <p>Cette carte attend un capteur créé avec la macro <code>iqa.jinja</code>.
-          Vérifiez que votre capteur définit bien&nbsp;:</p>
+          <p>Cette carte se contente d'afficher un capteur IQA, elle ne calcule
+          rien. Deux façons d'en obtenir un&nbsp;:</p>
+          <p>L'intégration <strong>iqa-score</strong>, qui se configure depuis
+          <em>Paramètres → Appareils et services</em>, sans aucun YAML.</p>
+          <p>Ou la macro <code>iqa.jinja</code>, depuis un capteur
+          <code>template</code>&nbsp;:</p>
           <pre>attributes:
   detail: &gt;
     {% from 'iqa.jinja' import iqa_detail %}
@@ -692,7 +697,7 @@ window.customCards.push({
   name: "IQA — Qualité de l'air",
   description: "Score de qualité de l'air, quatre présentations, vue détail au clic.",
   preview: true,
-  documentationURL: "https://github.com/REMPLACE_MOI/iqa-card",
+  documentationURL: "https://github.com/rivland/iqa-card",
 });
 
 console.info(
